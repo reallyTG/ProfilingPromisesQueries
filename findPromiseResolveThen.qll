@@ -5,4 +5,3 @@ predicate promiseDotResolveDotThen(MethodCallExpr c) {
     c.getReceiver() instanceof MethodCallExpr and
     ((MethodCallExpr) c.getReceiver()).getMethodName() = "resolve"
 }
-
