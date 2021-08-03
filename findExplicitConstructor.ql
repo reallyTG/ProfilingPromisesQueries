@@ -2,6 +2,6 @@ import javascript
 import findExplicitConstructor
 import formatSourceLocation
 
-from NewExpr ne
-where explicitPromiseConstructorAntipattern(ne)
-select "pattern9 " + formatSourceLocation(ne)
+from DataFlow::NewNode ne
+where explicitPromiseConstructor(ne)
+select "pattern9 " + formatSourceLocationDataFlow(ne)

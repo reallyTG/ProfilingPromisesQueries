@@ -4,4 +4,4 @@ import formatSourceLocation
 
 from Function f
 where isFSRedefinition(f)
-select "pattern4 " + formatSourceLocation(ast)
+select "pattern4 " + formatSourceLocation(f)
