@@ -4,4 +4,5 @@ import formatSourceLocation
 
 from DataFlow::NewNode ne
 where isPromiseConstructorWithSyncResolve(ne)
-select "pattern8 " + formatSourceLocationDataFlow(ne)
+select "promiseConstructorSyncResolve " + formatSourceLocationDataFlow(ne)
+// select "pattern8 " + formatSourceLocationDataFlow(ne)

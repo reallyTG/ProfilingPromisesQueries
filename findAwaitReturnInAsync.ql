@@ -4,4 +4,5 @@ import formatSourceLocation
 
 from Function f
 where asyncWithAwaitReturn(f)
-select "pattern1 " + formatSourceLocation(f)
+// select "pattern1 " + formatSourceLocation(f)
+select "awaitedReturnInAsyncFun " + formatSourceLocation(f)

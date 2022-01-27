@@ -13,5 +13,8 @@ predicate loopHasAwait(LoopStmt loop) {
     // ... or it's a normal for loop where the test condition is considering the length or size of something, ...
     ((FieldAccess) ((ForStmt) loop).getTest().getAChildExpr()).getPropertyName() in ["length", "size"]) and
     // and there's an await in the body.
-    exists(AwaitExpr ae | ae.getParent*() = loop)
+    exists(AwaitExpr ae | ae.getParent*() = loop.getBody()) and
+    // and there are no continues, breaks, or returns in the loop
+    not exists(ReturnStmt rs | rs.getParent*() = loop) and
+    not exists(BreakOrContinueStmt bocs | bocs.getParent*() = loop)
 }

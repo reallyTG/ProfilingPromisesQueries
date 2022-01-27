@@ -1,4 +1,4 @@
-import javascript 
+import javascript
 
 string formatSourceLocation(ASTNode ast) {
     result = ast.getLocation().getStartLine() + " " 

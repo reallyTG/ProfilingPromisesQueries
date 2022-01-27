@@ -4,4 +4,5 @@ import formatSourceLocation
 
 from MethodCallExpr c
 where promiseDotResolveDotThen(c)
-select "pattern2 " + formatSourceLocation(c)
+// select "pattern2 " + formatSourceLocation(c)
+select "promiseResolveThen " + formatSourceLocation(c)
